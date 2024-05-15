@@ -1,0 +1,11 @@
+@font-face {
+    font-family: CairoMed;
+    src: url('../font/Cairo-Bold.ttf');
+}
+@font-face {
+    font-family: CairoReg;
+    src: url('../font/Cairo-Regular.ttf');
+}
+.CairoMed{font-family: CairoMed;}
+.CairoReg{font-family: CairoReg;}
+

@@ -1,0 +1,105 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+:root {
+    --bg-color:#e9e6dd;
+    --bg-color-confirm:#008e47;
+    --bg-color-sorry:#e21210;
+    
+}
+html,body{
+    height: 100%;
+    background-color: var(--bg-color);
+}
+.Invinate {
+    padding: 25px 0px;
+}
+.Invinate .Logo-Company img{
+    width: 167px;
+    height: 85px;
+}
+.Invinate .Qr-Img img{
+    width: 170px;
+    height: 170px;
+}
+.Invinate .detail .date {
+    font-size: 10pt;
+    color: #9f9f9f;
+}
+.Invinate .detail .box-details {
+    padding: 15px;
+    border: 1px solid darkgray;
+    width: 35%;
+    margin: auto;
+    font-size: 10pt;
+    line-height: 25px;
+}
+
+.Invinate .btn-invinate .btn{ 
+    font-size: 12px;
+    width: 120px;
+    padding: 17px 15px;
+    color: white;
+    border-radius: 15px;
+    box-shadow: none;
+    outline: none;
+    -webkit-transition: 0.3s all;
+    -moz-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+
+} 
+.Invinate .btn-invinate .btn:hover{background-color: rgba(0, 0, 0, 0);}
+.Invinate .btn-invinate .btnConfirm:hover{color: var(--bg-color-confirm);}
+.Invinate .btn-invinate .btnSorry:hover{color: var(--bg-color-sorry);}
+.Invinate .btn-invinate .btnConfirm{
+    background-color: var(--bg-color-confirm);
+    border: 1px solid var(--bg-color-confirm);
+}
+.Invinate .btn-invinate .btnSorry{
+    background-color: var(--bg-color-sorry);
+    border: 1px solid var(--bg-color-sorry);
+}
+.modal{background-color: rgba(0, 0, 0, 0.7);}
+.modal-content{
+    background:none !important;
+    border: none;
+}
+.modal .modal-content form textarea {
+    background: none;
+    box-shadow: none;
+    outline: none;
+}
+.modal .modal-content form textarea::placeholder{color: rgba(255, 255, 255, 0.7);}
+.modal .modal-content div .btn{
+    font-size: 13px;
+    width: 100px;
+    padding: 17px 15px;
+    border-radius: 15px;
+    box-shadow: none;
+    outline: none;
+    -webkit-transition: 0.3s all;
+    -moz-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+}
+.modal .modal-content div .btn-confirm-sorry:hover{
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+}
+.modal .modal-content div .btn-confirm-sorryno:hover{
+    color: var(--bg-color-sorry);
+    background-color: rgba(0, 0, 0, 0);
+}
+.modal .modal-content div .btn-confirm-sorry{
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+}
+.modal .modal-content div .btn-confirm-sorryno{
+    color: white;
+    background-color: var(--bg-color-sorry);
+    border: 1px solid var(--bg-color-sorry);
+}
+.modal .modalTxt {font-size: 10pt;}

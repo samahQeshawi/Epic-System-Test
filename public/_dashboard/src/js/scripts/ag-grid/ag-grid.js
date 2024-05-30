@@ -39,7 +39,7 @@ $(document).ready(function() {
       width: 250
     },
     {
-      headerName: "City",
+      headerName: "Group",
       field: "city",
       editable: true,
       sortable: true,

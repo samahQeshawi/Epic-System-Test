@@ -16,7 +16,7 @@ class AuthController extends Controller
     }
     public function redirectTo(): string
     {
-        return route('users.index');
+        return route('employees.index');
     }
 
     public function showLoginForm(){
@@ -29,7 +29,7 @@ class AuthController extends Controller
 
         if ( Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])){
             Auth::guard('admin')->user();
-            return redirect('admin/users');
+            return redirect('admin/employees');
 
         }
 

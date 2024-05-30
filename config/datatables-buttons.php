@@ -8,9 +8,9 @@ return [
         /*
          * Base namespace/directory to create the new file.
          * This is appended on default Laravel namespace.
-         * Usage: php artisan datatables:make User
+         * Usage: php artisan datatables:make Employee
          * Output: App\DataTables\UserDataTable
-         * With Model: App\User (default model)
+         * With Model: App\Employee (default model)
          * Export filename: users_timestamp
          */
         'base' => 'DataTables',

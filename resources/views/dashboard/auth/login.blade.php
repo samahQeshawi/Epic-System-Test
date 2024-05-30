@@ -11,7 +11,7 @@
     <meta name="keywords"
           content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title> YEBAB | تسجيل الدخول</title>
+    <title> Epic | تسجيل الدخول</title>
     {{--    <link rel="apple-touch-icon" href="{{ asset('assets/dashboard') }}/app-assets/images/ico/apple-icon-120.png">--}}
     {{--    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/dashboard') }}/app-assets/images/ico/favicon.ico">--}}
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -70,7 +70,7 @@
                                             <h4 class="mb-0">تسجيل الدخول</h4>
                                         </div>
                                     </div>
-                                    <p class="px-2">مرحبا في لوحة تحكم موقع YEBAB</p>
+                                    <p class="px-2">مرحبا في لوحة تحكم موقع Epic System</p>
                                     <div class="card-content">
 
 

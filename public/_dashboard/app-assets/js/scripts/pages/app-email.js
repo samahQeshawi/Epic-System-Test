@@ -14,7 +14,7 @@ $(function () {
     var sidebar_menu_list = new PerfectScrollbar(".sidebar-menu-list");
   }
 
-  // User list scroll
+  // Employee list scroll
   if ($('.email-user-list').length > 0) {
     var users_list = new PerfectScrollbar(".email-user-list");
   }
@@ -129,10 +129,10 @@ else {
   $(".email-app-list #email-search").on("keyup", function () {
     var value = $(this).val().toLowerCase();
     if (value != "") {
-      $(".email-user-list .users-list-wrapper li").filter(function () {
+      $(".email-user-list .employees-list-wrapper li").filter(function () {
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
       });
-      var tbl_row = $(".email-user-list .users-list-wrapper li:visible").length; //here tbl_test is table name
+      var tbl_row = $(".email-user-list .employees-list-wrapper li:visible").length; //here tbl_test is table name
 
       //Check if table has row or not
       if (tbl_row == 0) {
@@ -146,7 +146,7 @@ else {
     }
     else {
       // If filter box is empty
-      $(".email-user-list .users-list-wrapper li").show();
+      $(".email-user-list .employees-list-wrapper li").show();
       if ($('.email-user-list .no-results').hasClass('show')) {
         $('.email-user-list .no-results').removeClass('show');
       }

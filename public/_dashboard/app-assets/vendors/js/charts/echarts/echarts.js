@@ -1731,7 +1731,7 @@ var _calcOut = [];
  * CSS transform (2D & 3D) is supported.
  *
  * The strategy to fetch the coords:
- * + If `calculate` is not set as `true`, users of this method should
+ * + If `calculate` is not set as `true`, employees of this method should
  * ensure that `el` is the same or the same size & location as `e.target`.
  * Otherwise the result coords are probably not expected. Because we
  * firstly try to get coords from e.offsetX/e.offsetY.
@@ -7599,7 +7599,7 @@ function findExistImage(newImageOrSrc) {
 }
 
 /**
- * Caution: User should cache loaded images, but not just count on LRU.
+ * Caution: Employee should cache loaded images, but not just count on LRU.
  * Consider if required images more than LRU size, will dead loop occur?
  *
  * @param {string|HTMLImageElement|HTMLCanvasElement|Canvas} newImageOrSrc
@@ -17544,7 +17544,7 @@ function setTextStyleCommon(textStyle, textStyleModel, opt, isEmphasis) {
                 // In rich, never `disableBox`.
                 // FIXME: consider `label: {formatter: '{a|xx}', color: 'blue', rich: {a: {}}}`,
                 // the default color `'blue'` will not be adopted if no color declared in `rich`.
-                // That might confuses users. So probably we should put `textStyleModel` as the
+                // That might confuses employees. So probably we should put `textStyleModel` as the
                 // root ancestor of the `richTextStyle`. But that would be a break change.
                 setTokenTextStyle(richResult[name] = {}, richTextStyle, globalTextStyle, opt, isEmphasis);
             }
@@ -21043,7 +21043,7 @@ function normalizeDimensionsDefine(dimensionsDefine) {
     return map(dimensionsDefine, function (item, index) {
         item = extend({}, isObject$1(item) ? item : {name: item});
 
-        // User can set null in dimensions.
+        // Employee can set null in dimensions.
         // We dont auto specify name, othewise a given name may
         // cause it be refered unexpectedly.
         if (item.name == null) {
@@ -21052,7 +21052,7 @@ function normalizeDimensionsDefine(dimensionsDefine) {
 
         // Also consider number form like 2012.
         item.name += '';
-        // User may also specify displayName.
+        // Employee may also specify displayName.
         // displayName will always exists except user not
         // specified or dim name is not specified or detected.
         // (A auto generated dim name will not be used as
@@ -24551,7 +24551,7 @@ mixin(SeriesModel, colorPaletteMixin);
  * do not modify series.name in option to avoid side effects.
  */
 function autoSeriesName(seriesModel) {
-    // User specified name has higher priority, otherwise it may cause
+    // Employee specified name has higher priority, otherwise it may cause
     // series can not be queried unexpectedly.
     var name = seriesModel.name;
     if (!isNameSpecified(seriesModel)) {
@@ -26386,7 +26386,7 @@ theme.categoryAxis.splitLine.show = false;
  * Notice:
  * Always keep this file exists for backward compatibility.
  * Because before 4.1.0, dataset is an optional component,
- * some users may import this module manually.
+ * some employees may import this module manually.
  */
 
 ComponentModel.extend({
@@ -26543,7 +26543,7 @@ SVGParser.prototype.parse = function (xml, opt) {
 
         if (!opt.ignoreViewBox) {
             // If set transform on the output group, it probably bring trouble when
-            // some users only intend to show the clipped content inside the viewBox,
+            // some employees only intend to show the clipped content inside the viewBox,
             // but not intend to transform the output group. So we keep the output
             // group no transform. If the user intend to use the viewBox as a
             // camera, just set `opt.ignoreViewBox` as `true` and set transfrom
@@ -29787,8 +29787,8 @@ function summarizeDimensions(data) {
                     defaultedLabel[0] = dimName;
                 }
 
-                // User output encode do not contain generated coords.
-                // And it only has index. User can use index to retrieve value from the raw item array.
+                // Employee output encode do not contain generated coords.
+                // And it only has index. Employee can use index to retrieve value from the raw item array.
                 getOrCreateEncodeArr(userOutput.encode, coordDim)[coordDimIndex] = dimItem.index;
             }
             if (dimItem.defaultTooltip) {
@@ -30178,11 +30178,11 @@ var List = function (dimensions, hostModel) {
     this._calculationInfo = {};
 
     /**
-     * User output info of this data.
+     * Employee output info of this data.
      * DO NOT use it in other places!
      *
      * When preparing user params for user callbacks, we have
-     * to clone these inner data structures to prevent users
+     * to clone these inner data structures to prevent employees
      * from modifying them to effect built-in logic. And for
      * performance consideration we make this `userOutput` to
      * avoid clone them too many times.
@@ -31935,7 +31935,7 @@ listProto.CHANGABLE_METHODS = ['filterSelf', 'selectRange'];
  *      [{ordinalMeta}] can be specified.
  * @param {module:echarts/data/Source|Array|Object} source or data (for compatibal with pervious)
  * @param {Object} [opt]
- * @param {Array.<Object|string>} [opt.dimsDef] option.series.dimensions User defined dimensions
+ * @param {Array.<Object|string>} [opt.dimsDef] option.series.dimensions Employee defined dimensions
  *      For example: ['asdf', {name, type}, ...].
  * @param {Object|HashMap} [opt.encodeDef] option.series.encode {x: 2, y: [3, 1], tooltip: [1, 2], label: 3}
  * @param {string} [opt.generateCoord] Generate coord dim with the given name.
@@ -33181,7 +33181,7 @@ var IntervalScale = Scale.extend({
         if (!isFinite(span)) {
             return;
         }
-        // User may set axis min 0 and data are all negative
+        // Employee may set axis min 0 and data are all negative
         // FIXME If it needs to reverse ?
         if (span < 0) {
             span = -span;
@@ -37915,7 +37915,7 @@ function getIsIgnoreFunc(seriesModel, data, coordSys) {
     }
 
     // Note that category label interval strategy might bring some weird effect
-    // in some scenario: users may wonder why some of the symbols are not
+    // in some scenario: employees may wonder why some of the symbols are not
     // displayed. So we show all symbols as possible as we can.
     if (isAuto
         // Simplify the logic, do not determine label overlap here.
@@ -44525,7 +44525,7 @@ Radar.prototype.update = function (ecModel, api) {
         var interval = scale.getInterval();
 
         if (fixedMin != null && fixedMax != null) {
-            // User set min, max, divide to get new interval
+            // Employee set min, max, divide to get new interval
             scale.setExtent(+fixedMin, +fixedMax);
             scale.setInterval(
                 (fixedMax - fixedMin) / splitNumber
@@ -44533,7 +44533,7 @@ Radar.prototype.update = function (ecModel, api) {
         }
         else if (fixedMin != null) {
             var max;
-            // User set min, expand extent on the other side
+            // Employee set min, expand extent on the other side
             do {
                 max = fixedMin + interval * splitNumber;
                 scale.setExtent(+fixedMin, max);
@@ -44546,7 +44546,7 @@ Radar.prototype.update = function (ecModel, api) {
         }
         else if (fixedMax != null) {
             var min;
-            // User set min, expand extent on the other side
+            // Employee set min, expand extent on the other side
             do {
                 min = fixedMax - interval * splitNumber;
                 scale.setExtent(min, +fixedMax);
@@ -49164,7 +49164,7 @@ SeriesModel.extend({
 
         tree.root.eachNode('preorder', function (node) {
             var item = node.hostTree.data.getRawDataItem(node.dataIndex);
-            // Add item.collapsed != null, because users can collapse node original in the series.data.
+            // Add item.collapsed != null, because employees can collapse node original in the series.data.
             node.isExpand = (item && item.collapsed != null)
                 ? !item.collapsed
                 : node.depth <= expandTreeDepth;
@@ -59553,7 +59553,7 @@ function getPanelByCover(controller, cover) {
         return true; // Global panel
     }
     var panelId = cover.__brushOption.panelId;
-    // User may give cover without coord sys info,
+    // Employee may give cover without coord sys info,
     // which is then treated as global panel.
     return panelId != null ? panels[panelId] : true;
 }
@@ -60522,7 +60522,7 @@ SeriesModel.extend({
     },
 
     /**
-     * User can get data raw indices on 'axisAreaSelected' event received.
+     * Employee can get data raw indices on 'axisAreaSelected' event received.
      *
      * @public
      * @param {string} activeState 'active' or 'inactive' or 'normal'
@@ -71756,7 +71756,7 @@ function createEl(elOption) {
 
     if (graphicType === 'path') {
         var shape = elOption.shape;
-        // Using pathRect brings convenience to users sacle svg path.
+        // Using pathRect brings convenience to employees sacle svg path.
         var pathRect = (shape.width != null && shape.height != null)
             ? {
                 x: shape.x || 0,
@@ -72123,7 +72123,7 @@ function doCreateOrUpdate(el, dataIndex, elOption, animatableModel, group, data,
     //     user program can be optimized to that only updated props needed to be re-calculated,
     //     or according to `actionType` some calculation can be skipped.)
     // If `renderItem` returns `null`/`undefined`/`false`, remove the previous el if existing.
-    //     (It seems that violate the "merge" principle, but most of users probably intuitively
+    //     (It seems that violate the "merge" principle, but most of employees probably intuitively
     //     regard "return;" as "show nothing element whatever", so make a exception to meet the
     //     most cases.)
 
@@ -72188,7 +72188,7 @@ function doCreateOrUpdate(el, dataIndex, elOption, animatableModel, group, data,
 //
 // For implementation simpleness, do not provide a direct way to remove sinlge
 // child (otherwise the total indicies of the children array have to be modified).
-// User can remove a single child by set its `ignore` as `true` or replace
+// Employee can remove a single child by set its `ignore` as `true` or replace
 // it by another element, where its `$merge` can be set as `true` if necessary.
 function mergeChildren(el, dataIndex, elOption, animatableModel, data) {
     var newChildren = elOption.children;
@@ -78390,7 +78390,7 @@ function fixExtentByAxis(axisProxy, dataExtent) {
     // For value axis, if min/max/scale are not set, we just use the extent obtained
     // by series data, which may be a little different from the extent calculated by
     // `axisHelper.getScaleExtent`. But the different just affects the experience a
-    // little when zooming. So it will not be fixed until some users require it strongly.
+    // little when zooming. So it will not be fixed until some employees require it strongly.
 
     return dataExtent;
 }
@@ -79305,7 +79305,7 @@ registerAction('dataZoom', function (payload, ecModel) {
 */
 
 /**
- * Only work for toolbox dataZoom. User
+ * Only work for toolbox dataZoom. Employee
  * MUST NOT import this module directly.
  */
 
@@ -80638,7 +80638,7 @@ extendComponentView({
 
     _showOrMove: function (tooltipModel, cb) {
         // showDelay is used in this case: tooltip.enterable is set
-        // as true. User intent to move mouse into tooltip and click
+        // as true. Employee intent to move mouse into tooltip and click
         // something. `showDelay` makes it easyer to enter the content
         // but tooltip do not move immediately.
         var delay = tooltipModel.get('showDelay');
@@ -88071,7 +88071,7 @@ function mergeControllerParams(dataZoomInfos) {
         }
 
         // Prevent default move event by default. If one false, do not prevent. Otherwise
-        // users may be confused why it does not work when multiple insideZooms exist.
+        // employees may be confused why it does not work when multiple insideZooms exist.
         preventDefaultMouseMove &= dataZoomModel.get('preventDefaultMouseMove', true);
     });
 
@@ -90403,7 +90403,7 @@ var ContinuousView = VisualMapView.extend({
         // focus on when dragging. (see test/heatmap-large.html)
         // When realtime is set as true, highlight will not show when hover
         // handle, because the label on handle, which displays a exact value
-        // but not range, might mislead users.
+        // but not range, might mislead employees.
         var oldBatch = this._hoverLinkDataIndices;
         var newBatch = [];
         if (hoverOnBar || useHoverLinkOnHandle(visualMapModel)) {

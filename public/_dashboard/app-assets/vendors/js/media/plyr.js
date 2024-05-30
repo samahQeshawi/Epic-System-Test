@@ -2945,7 +2945,7 @@ typeof navigator === "object" && (function (global, factory) {
               role: 'menuitem',
               'aria-haspopup': true,
               hidden: ''
-            })); // Bind menu shortcuts for keyboard users
+            })); // Bind menu shortcuts for keyboard employees
 
             bindMenuItemShortcuts.call(_this10, menuItem, type); // Show menu on click
 
@@ -5262,7 +5262,7 @@ typeof navigator === "object" && (function (global, factory) {
 
           setTimeout(function () {
             toggleClass(elements.controls, config.classNames.noTransition, false);
-          }, 0); // Delay a little more for mouse users
+          }, 0); // Delay a little more for mouse employees
 
           var delay = _this3.touch ? 3000 : 4000; // Clear timer
 

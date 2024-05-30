@@ -192,7 +192,7 @@ $chat-image-back-color: #dfdbe5;
       background-color: rgba(0, 0, 0, 0.2);
     }
   }
-  // User chat window css
+  // Employee chat window css
   .chat-app-window{
     .favorite, .sidebar-toggle{
       cursor: pointer;
@@ -283,7 +283,7 @@ $chat-image-back-color: #dfdbe5;
     }
   }
 
-  // User Profile right sidebar
+  // Employee Profile right sidebar
   .user-profile-sidebar{
     border-right: 1px solid $custom-border-color;
     height: calc(100vh - 13rem);

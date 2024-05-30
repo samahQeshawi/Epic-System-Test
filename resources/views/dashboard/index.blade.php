@@ -44,7 +44,7 @@
                                         <i class="fa fa-user text-danger fa-2x"></i>
                                     </div>
                                 </div>
-                                <h2 class="text-bold-700">{{\App\Models\User::count()}}</h2>
+                                <h2 class="text-bold-700">{{\App\Models\Employee::count()}}</h2>
                                 <p class="mb-0 line-ellipsis"> المستخدمين</p>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                                         <i class="fa fa-user-cog text-danger fa-2x"></i>
                                     </div>
                                 </div>
-                                <h2 class="text-bold-700">{{\App\Models\User::count()}}</h2>
+                                <h2 class="text-bold-700">{{\App\Models\Employee::count()}}</h2>
                                 <p class="mb-0 line-ellipsis"> مقدمين الخدمات</p>
                             </div>
                         </div>
@@ -107,7 +107,7 @@
                                         <i class="fa fa-hourglass-end text-danger fa-2x"></i>
                                     </div>
                                 </div>
-                                <h2 class="text-bold-700">{{\App\Models\User::whereHas('subscription',function ($q){
+                                <h2 class="text-bold-700">{{\App\Models\Employee::whereHas('subscription',function ($q){
                                         $q->where('end_at',"<=",now());})->count()}}</h2>
                                 <p class="mb-0 line-ellipsis"> عدد الاشتراكات المنتهية</p>
                             </div>
@@ -169,7 +169,7 @@
                                         <i class="fa fa-user text-danger fa-2x"></i>
                                     </div>
                                 </div>
-                                <h2 class="text-bold-700">{{\App\Models\User::whereHas('subscription',function ($q){
+                                <h2 class="text-bold-700">{{\App\Models\Employee::whereHas('subscription',function ($q){
                                             $q->where('type','personal');
                                         })->count()}}</h2>
                                 <p class="mb-0 line-ellipsis"> عدد الاشتركات الفردية</p>
@@ -186,7 +186,7 @@
                                         <i class="fa fa-users text-danger fa-2x"></i>
                                     </div>
                                 </div>
-                                <h2 class="text-bold-700">{{\App\Models\User::whereHas('subscription',function ($q){
+                                <h2 class="text-bold-700">{{\App\Models\Employee::whereHas('subscription',function ($q){
                                             $q->where('type','family');
                                         })->count()}}</h2>
                                 <p class="mb-0 line-ellipsis"> عدد الاشتركات العائلية</p>

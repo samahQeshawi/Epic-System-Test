@@ -7,20 +7,20 @@
     if($('.chat-application .chat-user-list').length > 0){
       var chat_user_list = new PerfectScrollbar(".chat-user-list");
     }
-  
+
     // Chat user profile
     if($('.chat-application .profile-sidebar-area .scroll-area').length > 0){
       var chat_user_list = new PerfectScrollbar(".profile-sidebar-area .scroll-area");
     }
-  
+
     // Chat area
     if($('.chat-application .user-chats').length > 0){
       var chat_user = new PerfectScrollbar(".user-chats", {
         wheelPropagation: false
       });
     }
-  
-    // User profile right area
+
+    // Employee profile right area
     if($('.chat-application .user-profile-sidebar-area').length > 0){
       var user_profile = new PerfectScrollbar(".user-profile-sidebar-area");
     }
@@ -41,7 +41,7 @@
     $('.chat-overlay').addClass('show');
   });
 
-  // User Profile sidebar toggle
+  // Employee Profile sidebar toggle
   $('.chat-application .user-profile-toggle').on('click',function(){
     $('.user-profile-sidebar').addClass('show');
     $('.chat-overlay').addClass('show');
@@ -79,7 +79,7 @@
     $('.user-profile-sidebar').removeClass('show');
   });
 
-  // Add class active on click of Chat users list
+  // Add class active on click of Chat employees list
   $(".chat-application .chat-user-list ul li").on('click', function(){
     if($('.chat-user-list ul li').hasClass('active')){
       $('.chat-user-list ul li').removeClass('active');
@@ -98,7 +98,7 @@
 
   // autoscroll to bottom of Chat area
   var chatContainer = $(".user-chats");
-  $(".chat-users-list-wrapper li").on("click", function () {
+  $(".chat-employees-list-wrapper li").on("click", function () {
     chatContainer.animate({ scrollTop: chatContainer[0].scrollHeight }, 400)
   });
 
@@ -136,13 +136,13 @@
   $(".chat-application #chat-search").on("keyup", function() {
     var value = $(this).val().toLowerCase();
     if(value!=""){
-      $(".chat-user-list .chat-users-list-wrapper li").filter(function() {
+      $(".chat-user-list .chat-employees-list-wrapper li").filter(function() {
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
       });
     }
     else{
       // If filter box is empty
-      $(".chat-user-list .chat-users-list-wrapper li").show();
+      $(".chat-user-list .chat-employees-list-wrapper li").show();
     }
   });
 

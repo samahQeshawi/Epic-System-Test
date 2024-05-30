@@ -1,6 +1,6 @@
 /*=========================================================================================
     File Name: user-profile.js
-    Description: User Profile jQuery Plugin Intialization
+    Description: Employee Profile jQuery Plugin Intialization
     --------------------------------------------------------------------------------------
     Item Name: Vuexy  - Vuejs, HTML & Laravel Admin Dashboard Template
     Author: PIXINVENT
